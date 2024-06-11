@@ -34,6 +34,10 @@ public class User {
 	public void setCity(String city) {
 		this.city = city;
 	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", city=" + city + "]";
+	}
 	
 
 }

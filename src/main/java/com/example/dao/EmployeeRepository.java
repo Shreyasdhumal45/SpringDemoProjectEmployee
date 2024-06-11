@@ -12,9 +12,9 @@ import com.example.model.Employee;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Serializable>{
 
-	@Query(value= "select * from employee where city=?" , nativeQuery=true )
+	@Query(value= "select * from employee c where city=?1" , nativeQuery=true )
 	public List<Employee> findByCity(String city);
 	
-	@Query(value= "select * from employee where name=?" , nativeQuery=true )
+	@Query(value= "select * from employee c where name=?1" , nativeQuery=true )
 	public List<Employee> findByName(String name);
 }
